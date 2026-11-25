@@ -77,9 +77,9 @@
     }
     .phone-screen {
       border-radius: 24px; overflow: hidden; border: 1px solid #303741;
-      background: #101419; min-height: 510px; padding: 22px 18px;
-      display: flex; flex-direction: column; gap: 16px;
+      background: #101419; display: block;
     }
+    .phone-screen img { width: 100%; height: auto; display: block; }
     .phone-top { display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 11px; }
     .phone-title { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
     .phone-title .mark { width: 32px; height: 32px; border-radius: 9px; }
@@ -195,31 +195,9 @@
         <p class="hint">APK 约 30.5 MB · Android 8.0+ · 包名 io.github.mtsrch</p>
       </div>
 
-      <div class="phone" aria-hidden="true">
+      <div class="phone">
         <div class="phone-screen">
-          <div class="phone-top"><span>09:41</span><span>Magnet Search</span></div>
-          <div class="phone-title">
-            <span class="mark">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 4v7a8 8 0 0 0 16 0V4"/><path d="M4 4h4v7a4 4 0 0 0 8 0V4h4"/></svg>
-            </span>
-            <strong>搜索</strong>
-          </div>
-          <div class="searchbox"><span>输入片名、演员或关键词</span><span>SEARCH</span></div>
-          <div class="result">
-            <div class="result-title">Resident Evil</div>
-            <div class="result-meta"><span>2002</span><span>电影</span><span>6.6</span></div>
-            <div class="result-tag">1080p · 中字 · 磁力</div>
-          </div>
-          <div class="result">
-            <div class="result-title">Resident Evil: Apocalypse</div>
-            <div class="result-meta"><span>2004</span><span>电影</span><span>6.1</span></div>
-            <div class="result-tag">1080p · 中字 · 磁力</span>
-          </div>
-          <div class="result">
-            <div class="result-title">Resident Evil: Extinction</div>
-            <div class="result-meta"><span>2007</span><span>电影</span><span>6.2</span></div>
-            <div class="result-tag">1080p · 中字 · 磁力</div>
-          </div>
+          <img src="assets/magnet-search-ubuntu.png" width="720" height="1616" alt="Magnet Search 搜索 ubuntu 的真实界面截图，显示 Ubuntu 桌面版与服务器版 ISO 磁力结果">
         </div>
       </div>
     </section>
