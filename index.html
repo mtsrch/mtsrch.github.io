@@ -6,8 +6,8 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#0b0d10">
 
-  <title>Magnet Search — Lightweight Offline Magnet Search for Android</title>
-  <meta name="description" content="Magnet Search is a lightweight Android app for offline magnet search. Download the signed 1.1.3 APK (30.5 MB) with no ads, analytics, or trackers.">
+  <title>Magnet Search — Download the Android APK</title>
+  <meta name="description" content="Download Magnet Search 1.1.3, a lightweight offline magnet search app for Android. Signed APK, 30.5 MB, no ads or trackers.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="application-name" content="Magnet Search">
   <link rel="canonical" href="https://mtsrch.github.io/">
@@ -17,8 +17,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Magnet Search">
-  <meta property="og:title" content="Magnet Search — Lightweight offline magnet search for Android">
-  <meta property="og:description" content="Offline magnet search in a 30.5 MB Android app. Signed 1.1.3 APK, no ads, analytics, or trackers.">
+  <meta property="og:title" content="Magnet Search — Download the Android APK">
+  <meta property="og:description" content="Download Magnet Search 1.1.3, a lightweight offline magnet search app for Android.">
   <meta property="og:url" content="https://mtsrch.github.io/">
   <meta property="og:image" content="https://mtsrch.github.io/assets/og-cover.png">
   <meta property="og:image:width" content="1200">
@@ -27,130 +27,70 @@
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Magnet Search — Lightweight offline magnet search for Android">
-  <meta name="twitter:description" content="Offline magnet search in a 30.5 MB Android app. Signed 1.1.3 APK, no ads, analytics, or trackers.">
+  <meta name="twitter:title" content="Magnet Search — Download the Android APK">
+  <meta name="twitter:description" content="Download Magnet Search 1.1.3, a lightweight offline magnet search app for Android.">
   <meta name="twitter:image" content="https://mtsrch.github.io/assets/og-cover.png">
   <meta name="twitter:image:alt" content="Magnet Search app showing Ubuntu magnet search results">
 
   <style>
     :root {
       --bg: #0b0d10;
-      --panel: #11151a;
-      --panel-2: #151a20;
-      --line: #262c34;
-      --text: #f3f0e8;
+      --text: #f4f1e9;
       --muted: #98a1ab;
+      --line: #272d35;
       --gold: #e8c07d;
-      --gold-soft: #f0d2a0;
-      --radius: 16px;
+      --gold-soft: #f2d6a5;
     }
     * { box-sizing: border-box; }
-    html { background: var(--bg); scroll-behavior: smooth; }
+    html { background: var(--bg); }
     body {
       margin: 0;
+      min-height: 100svh;
       color: var(--text);
       background:
-        radial-gradient(720px 420px at 18% -10%, rgba(232,192,125,.08), transparent 68%),
+        radial-gradient(680px 420px at 50% -8%, rgba(232,192,125,.10), transparent 70%),
         var(--bg);
-      font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
       -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
     }
     a { color: inherit; text-decoration: none; }
     img, svg { display: block; }
-    .wrap { width: min(1040px, calc(100% - 48px)); margin: 0 auto; }
-    header { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,.055); }
+    .wrap { width: min(920px, calc(100% - 48px)); margin: 0 auto; }
+    header { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .01em; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; }
     .mark {
-      width: 32px; height: 32px; border: 1px solid rgba(232,192,125,.36);
+      width: 32px; height: 32px; border: 1px solid rgba(232,192,125,.34);
       border-radius: 9px; display: grid; place-items: center;
-      background: rgba(232,192,125,.07); color: var(--gold);
+      background: rgba(232,192,125,.06); color: var(--gold);
     }
-    nav { display: flex; align-items: center; gap: 24px; color: var(--muted); font-size: 13px; }
+    nav { display: flex; gap: 22px; color: var(--muted); font-size: 12px; }
     nav a:hover { color: var(--text); }
-    .hero { padding: 86px 0 62px; display: grid; grid-template-columns: minmax(0,1fr) 268px; gap: 72px; align-items: center; }
-    .eyebrow { display: inline-block; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; }
-    h1 { margin: 0; font-size: clamp(48px, 6.2vw, 70px); line-height: .96; letter-spacing: -.05em; }
-    .tagline { margin: 20px 0 0; color: var(--gold-soft); font-size: 22px; line-height: 1.35; letter-spacing: -.02em; }
-    .lede { margin: 18px 0 0; max-width: 590px; color: var(--muted); font-size: 15px; }
-    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 30px; }
+    main { flex: 1; display: grid; place-items: center; padding: 84px 0 96px; }
+    .hero { width: min(520px, 100%); text-align: center; }
+    .eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 12px 0 0; font-size: clamp(48px, 7vw, 72px); line-height: .98; letter-spacing: -.05em; }
+    .tagline { margin: 18px 0 0; color: var(--gold-soft); font-size: 19px; line-height: 1.4; letter-spacing: -.015em; }
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-      min-height: 44px; padding: 0 20px; border-radius: 10px;
-      border: 1px solid transparent; font-weight: 650; font-size: 14px;
-      transition: background .16s ease, border-color .16s ease, transform .16s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 0 26px; margin-top: 34px;
+      border-radius: 11px; background: var(--gold); color: #151109;
+      font-weight: 700; font-size: 15px;
+      transition: background .16s ease, transform .16s ease;
     }
-    .btn:hover { transform: translateY(-1px); }
-    .btn.primary { background: var(--gold); color: #151109; }
-    .btn.primary:hover { background: var(--gold-soft); }
-    .btn.ghost { border-color: var(--line); color: var(--text); }
-    .btn.ghost:hover { border-color: #46505c; background: rgba(255,255,255,.035); }
-    .meta { margin-top: 12px; color: var(--muted); font-size: 12px; }
-    .shot { margin: 0; }
-    .shot img { width: 100%; height: auto; border: 1px solid #303741; border-radius: 22px; box-shadow: 0 24px 60px rgba(0,0,0,.38); }
-    .shot figcaption { margin-top: 12px; color: var(--muted); font-size: 11px; text-align: center; }
-    .facts { display: grid; grid-template-columns: repeat(3, 1fr); padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .fact { padding: 0 24px; border-right: 1px solid var(--line); }
-    .fact:first-child { padding-left: 0; }
-    .fact:last-child { border-right: 0; }
-    .fact strong { display: block; font-size: 21px; letter-spacing: -.02em; }
-    .fact span { color: var(--muted); font-size: 12px; }
-    section { scroll-margin-top: 28px; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
-    .section-head h2 { margin: 0; font-size: 25px; letter-spacing: -.03em; }
-    .section-head p { margin: 0; color: var(--muted); font-size: 12px; }
-    #download, #install { padding-top: 76px; }
-    .panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
-    .download-grid { display: grid; grid-template-columns: 1.12fr .88fr; }
-    .download-main { padding: 28px; }
-    .download-main h3 { margin: 0 0 6px; font-size: 17px; }
-    .download-main > p { margin: 0; color: var(--muted); font-size: 13px; }
-    dl { margin: 22px 0 0; }
-    .row { display: grid; grid-template-columns: 118px minmax(0,1fr); gap: 16px; padding: 9px 0; border-top: 1px solid rgba(255,255,255,.055); }
-    dt { color: var(--muted); font-size: 12px; }
-    dd { margin: 0; font-size: 13px; overflow-wrap: anywhere; }
-    code { font: 12px/1.6 "SFMono-Regular", Consolas, Menlo, monospace; color: #dedbd2; }
-    .hash { color: var(--gold-soft); }
-    .download-side { padding: 28px; border-left: 1px solid var(--line); background: var(--panel-2); border-radius: 0 var(--radius) var(--radius) 0; }
-    .download-side h3 { margin: 0 0 12px; font-size: 15px; }
-    .download-side p { margin: 0; color: var(--muted); font-size: 12px; }
-    .download-side .actions { margin-top: 20px; }
-    .download-side .btn { width: 100%; }
-    .small { margin-top: 14px !important; font-size: 11px !important; }
-    .cols { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
-    .card { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
-    .card h3 { margin: 0 0 14px; font-size: 16px; }
-    .steps { counter-reset: step; display: grid; gap: 15px; margin: 0; padding: 0; list-style: none; }
-    .steps li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
-    .steps li::before { counter-increment: step; content: counter(step); width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; color: var(--gold); font-size: 11px; font-weight: 700; }
-    .steps b { display: block; font-size: 13px; margin-bottom: 2px; }
-    .steps span { color: var(--muted); font-size: 12px; }
-    .note { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.06); color: var(--muted); font-size: 11px; }
-    .card p { margin: 0; color: var(--muted); font-size: 12px; }
-    .card .btn { margin-top: 18px; }
-    .privacy { margin-top: 76px; padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .privacy strong { font-size: 15px; }
-    .privacy p { margin: 3px 0 0; color: var(--muted); font-size: 12px; }
-    footer { margin-top: 40px; padding: 26px 0 44px; border-top: 1px solid rgba(255,255,255,.055); color: var(--muted); font-size: 11px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-    footer a { color: var(--gold); }
-    @media (max-width: 800px) {
-      .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 58px; }
-      .shot { width: min(250px, 72%); }
-      nav { display: none; }
-      .facts { grid-template-columns: 1fr; gap: 16px; }
-      .fact { padding: 0; border-right: 0; }
-      .download-grid, .cols { grid-template-columns: 1fr; }
-      .download-side { border-left: 0; border-top: 1px solid var(--line); border-radius: 0 0 var(--radius) var(--radius); }
-      .section-head { align-items: flex-start; flex-direction: column; gap: 6px; }
-      .privacy { flex-direction: column; align-items: flex-start; }
-      h1 { font-size: 48px; }
-      .tagline { font-size: 20px; }
-    }
+    .btn:hover { background: var(--gold-soft); transform: translateY(-1px); }
+    .meta { margin: 14px 0 0; color: var(--muted); font-size: 12px; }
+    footer { padding: 22px 0 30px; border-top: 1px solid rgba(255,255,255,.05); color: var(--muted); font-size: 11px; text-align: center; }
+    footer a:hover { color: var(--text); }
     @media (max-width: 480px) {
       .wrap { width: calc(100% - 32px); }
-      .download-main, .download-side, .card { padding: 20px; }
-      .row { grid-template-columns: 96px minmax(0,1fr); }
-      .actions .btn { width: 100%; }
+      nav { gap: 16px; }
+      main { padding: 64px 0 72px; }
+      h1 { font-size: 46px; }
+      .tagline { font-size: 17px; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
@@ -163,110 +103,29 @@
         </span>
         <span>Magnet Search</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#download">Download</a>
-        <a href="#install">Install</a>
+      <nav aria-label="Secondary navigation">
         <a href="https://mtsrch.github.io/home/privacy/">Privacy</a>
         <a href="https://github.com/mtsrch">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Android · Version 1.1.3</div>
-        <h1>Magnet Search</h1>
-        <p class="tagline">Lightweight, offline magnet search for Android.</p>
-        <p class="lede">Search a bundled index of 16,306 entries. Copy magnet links, inspect file details, and keep favorites on your device. No ads, analytics, or trackers.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.3/yingshi-magnet-1.1.3-release.apk">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-            Download APK
-          </a>
-          <a class="btn ghost" href="#verify">Verify checksum</a>
-        </div>
-        <p class="meta">30.5 MB · Android 8.0+ · <code>io.github.mtsrch</code></p>
-      </div>
-      <figure class="shot">
-        <img src="assets/magnet-search-ubuntu.png" width="720" height="1616" alt="Magnet Search results for ubuntu showing desktop and server ISO magnet links">
-        <figcaption>Real app screenshot · search for “ubuntu”</figcaption>
-      </figure>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow">Android · 1.1.3</div>
+      <h1 id="title">Magnet Search</h1>
+      <p class="tagline">Lightweight, offline magnet search for Android.</p>
+      <a class="btn" href="https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.3/yingshi-magnet-1.1.3-release.apk">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Download APK
+      </a>
+      <p class="meta">30.5 MB · Android 8.0+ · <code>io.github.mtsrch</code></p>
     </section>
-
-    <section class="facts" aria-label="Key facts">
-      <div class="fact"><strong>16,306</strong><span>magnet entries bundled</span></div>
-      <div class="fact"><strong>0</strong><span>ads, analytics, or trackers</span></div>
-      <div class="fact"><strong>Offline</strong><span>search after installation</span></div>
-    </section>
-
-    <section id="download">
-      <div class="section-head">
-        <h2>Download &amp; verify</h2>
-        <p>Signed release · upgrades keep local data</p>
-      </div>
-      <div class="panel download-grid">
-        <div class="download-main">
-          <h3>Magnet edition · 1.1.3</h3>
-          <p>A standalone build for fast magnet search without the full library database or posters.</p>
-          <dl>
-            <div class="row"><dt>Package</dt><dd><code>io.github.mtsrch</code></dd></div>
-            <div class="row"><dt>Version</dt><dd>1.1.3 (versionCode 14)</dd></div>
-            <div class="row"><dt>File size</dt><dd>30,521,707 bytes (30.5 MB)</dd></div>
-            <div class="row"><dt>Minimum Android</dt><dd>8.0 (API 26)</dd></div>
-            <div class="row"><dt>Signature</dt><dd>Long-term release key</dd></div>
-            <div class="row"><dt>SHA-256</dt><dd class="hash"><code id="verify">1b262c87efd8c7016ba585f912a2665b9199abcd169c5afb2b0cf69e6b912c19</code></dd></div>
-          </dl>
-        </div>
-        <div class="download-side">
-          <h3>Verify before installing</h3>
-          <p>Download the checksum file and compare it with the hash shown here.</p>
-          <div class="actions">
-            <a class="btn ghost" href="https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.3/yingshi-magnet-1.1.3-release.apk.sha256">Download .sha256</a>
-            <a class="btn ghost" href="https://github.com/mtsrch/mtsrch.github.io/releases/tag/magnet-v1.1.3">Release notes</a>
-          </div>
-          <p class="small">On Android, a file manager or terminal app can calculate the SHA-256 hash of the downloaded APK.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="install">
-      <div class="section-head">
-        <h2>Install &amp; update</h2>
-        <p>Sideload the APK · Google Play is not required</p>
-      </div>
-      <div class="cols">
-        <div class="card">
-          <h3>Install in three steps</h3>
-          <ol class="steps">
-            <li><div><b>Download the APK</b><span>Save yingshi-magnet-1.1.3-release.apk.</span></div></li>
-            <li><div><b>Allow unknown apps</b><span>Allow installs once in your browser or file manager.</span></div></li>
-            <li><div><b>Open and search</b><span>The bundled index is ready in a few seconds and then works offline.</span></div></li>
-          </ol>
-          <p class="note">Upgrading from an older debug build requires uninstalling it first. Uninstalling clears local favorites and history.</p>
-        </div>
-        <div class="card">
-          <h3>Obtainium updates</h3>
-          <p>Add the GitHub repository <code>mtsrch/mtsrch.github.io</code> in Obtainium. New releases will appear there automatically.</p>
-          <a class="btn ghost" href="https://github.com/mtsrch/mtsrch.github.io/releases">View GitHub Releases</a>
-          <p class="note">Update checks read the version and APK filename. Installs keep the same release signature.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="privacy">
-      <div>
-        <strong>Privacy Policy</strong>
-        <p>Favorites and history stay on your device. No sync, advertising, analytics, or crash reporting.</p>
-      </div>
-      <a class="btn ghost" href="https://mtsrch.github.io/home/privacy/">Read policy</a>
-    </section>
-
-    <footer>
-      <span>© 2026 Magnet Search · mtsrch</span>
-      <span>Indexes magnet metadata only. No download, playback, or seeding. Use only for lawful public content.</span>
-    </footer>
   </main>
+
+  <footer>
+    <div class="wrap">© 2026 Magnet Search · mtsrch</div>
+  </footer>
 
   <script type="application/ld+json">
   {
@@ -295,17 +154,11 @@
         "softwareVersion": "1.1.3",
         "fileSize": "30.5MB",
         "inLanguage": "en",
-        "description": "A lightweight Android app for offline magnet search, magnet details, and local favorites. No ads, analytics, or trackers.",
+        "description": "A lightweight Android app for offline magnet search. No ads, analytics, or trackers.",
         "image": "https://mtsrch.github.io/assets/og-cover.png",
         "downloadUrl": "https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.3/yingshi-magnet-1.1.3-release.apk",
         "installUrl": "https://github.com/mtsrch/mtsrch.github.io/releases",
-        "softwareHelp": "https://mtsrch.github.io/#install",
         "privacyPolicy": "https://mtsrch.github.io/home/privacy/",
-        "featureList": [
-          "Offline magnet search",
-          "Magnet file details",
-          "Local favorites and history"
-        ],
         "offers": {
           "@type": "Offer",
           "price": "0",
