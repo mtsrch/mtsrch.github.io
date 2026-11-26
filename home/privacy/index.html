@@ -85,10 +85,9 @@
     or search terms. The magnet index is bundled with the APK, and searches run only in the local database.
   </p>
   <p>
-    The magnet edition does not bundle poster images. When a poster is displayed, the app loads the image from a public
-    asset host over a standard HTTPS request. That request carries no account, favorites, search history, or device
-    identifier. The asset host may keep standard logs of IP address, access time, and request path for image delivery,
-    abuse prevention, and security only.
+    The magnet edition does not include poster browsing or remote image loading and makes no network requests in
+    normal use. If you tap the online privacy policy link, the app hands the URL to your system browser; the browser,
+    not the app, makes the network request.
   </p>
   <p class="note">
     The app contains no crash-reporting SDK. Crash, diagnostic, or installation data collected by Google Play or
@@ -106,13 +105,11 @@
   </p>
 
   <h2>5. Permissions</h2>
-  <p>The current version requests only:</p>
-  <table>
-    <tbody>
-      <tr><th><code>INTERNET</code></th><td>Used to load poster images and to open the privacy policy, release pages, and other external links in the system browser.</td></tr>
-      <tr><th><code>ACCESS_NETWORK_STATE</code></th><td>Not read by the current version; the permission remains declared in the app manifest.</td></tr>
-    </tbody>
-  </table>
+  <p>The app declares two Android permissions. Neither is required for its current features:</p>
+  <ul>
+    <li><code>INTERNET</code> — Declared in the manifest but not used for search or data collection. Magnet search runs against the bundled offline index. Opening the online privacy policy passes the link to the system browser.</li>
+    <li><code>ACCESS_NETWORK_STATE</code> — Declared in the manifest but not read by the app.</li>
+  </ul>
   <p class="note">
     The app does not request location, contacts, SMS, camera, microphone, photos/files, storage, or device identifier
     permissions, and does not read data belonging to other apps.
@@ -128,8 +125,8 @@
     privacy policy. The app itself does not include Google Play Services advertising or analytics components.
   </p>
   <p>
-    The magnet edition does not bundle poster images; posters are loaded from a public asset host, which may process
-    standard access logs under its own privacy policy.
+    The magnet edition does not contact an image or asset host. The only third-party service involved in distribution
+    is Google Play.
   </p>
   <p class="note">
     Information may be disclosed only when required to comply with applicable law or valid legal process; to protect
@@ -146,8 +143,7 @@
   </ul>
   <p class="note">
     Favorites, search history, and language preference have no developer-server copy. Clearing app data or uninstalling
-    removes the local data. Poster requests may be retained by the asset host under standard log practices for delivery
-    and security only.
+    removes the local data.
   </p>
 
   <h2>8. Links to other sites</h2>
@@ -167,8 +163,8 @@
   <h2>10. Security</h2>
   <p>
     Local data is stored in the app’s private Android directory and protected by the operating system sandbox.
-    Favorites and search history remain on the device and are not uploaded. Poster loading sends only the image request
-    and no local data.
+    Favorites and search history remain on the device and are not uploaded. The app does not send favorites, search
+    history, or search terms to a server.
   </p>
 
   <h2>11. Changes</h2>
