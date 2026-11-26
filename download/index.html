@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0d10">
+  <title>Downloading Magnet Search</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://mtsrch.github.io/">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/app-icon.png">
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --text: #f4f1e9;
+      --muted: #98a1ab;
+      --line: #272d35;
+      --gold: #e8c07d;
+      --gold-soft: #f2d6a5;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      color: var(--text);
+      background:
+        radial-gradient(680px 420px at 50% -8%, rgba(232,192,125,.10), transparent 70%),
+        var(--bg);
+      font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(920px, calc(100% - 48px)); margin: 0 auto; }
+    header { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; }
+    .mark { width: 32px; height: 32px; border-radius: 9px; }
+    nav { display: flex; gap: 22px; color: var(--muted); font-size: 12px; }
+    nav a:hover { color: var(--text); }
+    main { flex: 1; display: flex; align-items: center; padding: 72px 0; }
+    .card { width: min(520px, 100%); margin: 0 auto; text-align: center; }
+    .eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 12px 0 0; font-size: clamp(38px, 6vw, 52px); line-height: 1; letter-spacing: -.04em; }
+    .lede { margin: 18px 0 0; color: var(--gold-soft); font-size: 17px; line-height: 1.55; }
+    .status { min-height: 22px; margin: 16px 0 0; color: var(--muted); font-size: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 0 26px; margin-top: 22px;
+      border-radius: 11px; background: var(--gold); color: #151109;
+      font-weight: 700; font-size: 15px;
+      transition: background .16s ease, transform .16s ease;
+    }
+    .btn:hover { background: var(--gold-soft); transform: translateY(-1px); }
+    .meta { margin: 16px 0 0; color: var(--muted); font-size: 12px; }
+    .meta a { color: var(--gold-soft); text-decoration: underline; text-underline-offset: 3px; }
+    footer { padding: 22px 0 30px; border-top: 1px solid rgba(255,255,255,.05); color: var(--muted); font-size: 11px; text-align: center; }
+    footer a:hover { color: var(--text); }
+    @media (max-width: 480px) {
+      .wrap { width: calc(100% - 32px); }
+      nav { gap: 16px; }
+      main { padding: 56px 0; }
+      h1 { font-size: 38px; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <img class="mark" src="/assets/app-icon.png" width="32" height="32" alt="">
+        <span>Magnet Search</span>
+      </a>
+      <nav aria-label="Secondary navigation">
+        <a href="/home/privacy/">Privacy</a>
+        <a href="https://github.com/mtsrch">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="title">
+      <div class="eyebrow">Android · 1.1.9</div>
+      <h1 id="title">Starting your download</h1>
+      <p class="lede">The APK download will begin automatically in 2 seconds.</p>
+      <p class="status" id="status" role="status">Preparing the download…</p>
+      <a class="btn" id="download" rel="noopener"
+         href="https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.9/mtsrch-magnet-1.1.9-release.apk">
+        Download APK
+      </a>
+      <p class="meta">33.6 MB · Android 8.0+ · <code>io.github.mtsrch</code></p>
+      <p class="meta"><a href="https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.9/mtsrch-magnet-1.1.9-release.apk.sha256">SHA-256 checksum</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Magnet Search · <a href="/">Back to home</a></div>
+  </footer>
+
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bb1281a70ce740908dcd2fe32fbe75e6"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+
+  <script>
+    (() => {
+      const link = document.getElementById('download');
+      const status = document.getElementById('status');
+      let started = false;
+
+      link.addEventListener('click', () => {
+        started = true;
+        clearTimeout(timer);
+        status.textContent = 'Download started. If nothing happens, click the button again.';
+      });
+
+      const timer = setTimeout(() => {
+        if (started) return;
+        started = true;
+        status.textContent = 'Download started. If nothing happens, click the button below.';
+        link.click();
+      }, 2000);
+    })();
+  </script>
+</body>
+</html>
