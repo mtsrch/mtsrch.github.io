@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index,follow">
+  <title>Magnet Search · Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Magnet Search (io.github.mtsrch), covering local data, network requests, permissions, third-party services, deletion, and contact details.">
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --panel: #151a21;
+      --panel-2: #11161c;
+      --line: #2a313b;
+      --text: #e9e7df;
+      --muted: #9aa2ad;
+      --gold: #d6b56d;
+      --gold-soft: #f0d39a;
+      --green: #74c69d;
+      --max: 880px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(60% 35% at 15% 0%, rgba(214,181,109,.12), transparent 70%),
+        radial-gradient(45% 30% at 95% 10%, rgba(90,150,210,.10), transparent 70%),
+        var(--bg);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--gold-soft); text-underline-offset: 3px; }
+    a:hover { color: #ffe6b2; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 60px 0 28px; }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 9px;
+      color: var(--gold); font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+    }
+    .kicker::before { content: ""; width: 22px; height: 1px; background: var(--gold); }
+    h1 { margin: 14px 0 12px; font-size: clamp(32px, 6vw, 54px); line-height: 1.08; letter-spacing: -.035em; }
+    .lead { margin: 0; max-width: 66ch; color: var(--muted); }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px;
+      color: var(--muted); font-size: 12px; background: rgba(255,255,255,.02);
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; padding: 10px 0 0; }
+    nav a {
+      text-decoration: none; font-size: 13px; color: var(--muted);
+      border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px;
+      background: rgba(255,255,255,.02);
+    }
+    nav a:hover { color: var(--text); border-color: #46505e; }
+    main { padding-bottom: 64px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.025), transparent 40%), var(--panel);
+      border: 1px solid var(--line); border-radius: 18px;
+      padding: clamp(22px, 4vw, 38px); margin: 18px 0;
+      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    }
+    section { padding-top: 6px; scroll-margin-top: 20px; }
+    h2 {
+      display: flex; align-items: baseline; gap: 12px;
+      margin: 34px 0 10px; font-size: 20px; letter-spacing: -.01em;
+    }
+    h2:first-child { margin-top: 0; }
+    .num { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: .08em; min-width: 26px; }
+    h3 { margin: 22px 0 8px; font-size: 16px; color: var(--text); }
+    p { margin: 8px 0; color: #cfd3d8; }
+    p.muted, li.muted { color: var(--muted); }
+    ul { margin: 10px 0 0; padding-left: 22px; }
+    li { margin: 6px 0; color: #cfd3d8; }
+    strong { color: var(--text); font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px; color: var(--gold-soft); word-break: break-all;
+    }
+    .callout {
+      margin: 18px 0; padding: 14px 16px; border-left: 3px solid var(--gold);
+      background: rgba(214,181,109,.06); border-radius: 0 10px 10px 0;
+      color: #d9d6cc; font-size: 14px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 500; width: 34%; }
+    td { color: #d2d6db; }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    .ok { color: var(--green); }
+    .contact {
+      margin-top: 18px; padding: 18px; border: 1px solid var(--line);
+      border-radius: 12px; background: var(--panel-2);
+    }
+    .contact strong { display: block; margin-bottom: 4px; }
+    footer {
+      padding: 0 0 54px; color: #7c838d; font-size: 13px;
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    @media (max-width: 620px) {
+      .wrap { width: calc(100% - 28px); }
+      header { padding-top: 42px; }
+      th { width: 40%; }
+      th, td { padding: 9px 8px; }
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      .card { border: 0; padding: 0; background: none; }
+      nav, .meta, footer { display: none; }
+      a { color: #000; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Magnet Search · Privacy Policy</div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">
+      This policy explains how the Magnet Search Android app (package name io.github.mtsrch) handles your information.
+      Magnet Search is provided by developer bzl and is intended for use as is. In short: favorites and search history stay
+      on your device; search uses a bundled offline index; the app contains no advertising, analytics, or crash-reporting SDK.
+    </p>
+    <div class="meta">
+      <span class="chip"><span class="dot"></span> Effective date: 2026-11-25</span>
+      <span class="chip">Package: io.github.mtsrch</span>
+      <span class="chip">Applies to version 1.1.3 and later</span>
+    </div>
+    <nav aria-label="Contents">
+      <a href="#sec-1">Information</a>
+      <a href="#sec-3">Logs</a>
+      <a href="#sec-4">Cookies</a>
+      <a href="#sec-5">Permissions</a>
+      <a href="#sec-6">Sharing</a>
+      <a href="#sec-7">Deletion</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="card" lang="en">
+      <section id="sec-0">
+        <p class="muted">
+          This policy applies to the Magnet Search Android app. By using the app, you agree to the information practices
+          described here. Terms used in this policy have the same meaning as in applicable law and the Google Play Terms of Service.
+        </p>
+      </section>
+
+      <section id="sec-1">
+        <h2><span class="num">01</span>Information we collect and store</h2>
+        <p>
+          Magnet Search does not require an account and does not ask for your name, email address, phone number,
+          location, or other identity information. The app stores only the following preferences and actions on your device:
+        </p>
+        <table>
+          <tr><th>Favorites</th><td>Infohashes you starred, used to show them in “Favorites”.</td></tr>
+          <tr><th>Search history</th><td>Up to 20 recent search terms, de-duplicated and ordered newest first, used to refill searches.</td></tr>
+          <tr><th>Language</th><td>Your selected interface language (Chinese or English).</td></tr>
+        </table>
+        <p class="muted">
+          This data is stored only in the app’s private Android storage (SharedPreferences). It is not uploaded to our servers
+          and is not shared with advertisers, analytics providers, or other third parties. The app does not actively read
+          the Android Advertising ID or collect a device identifier.
+        </p>
+      </section>
+
+      <section id="sec-2">
+        <h2><span class="num">02</span>How search works</h2>
+        <p>
+          Magnet search runs against an offline index bundled with the app. Your search terms are used only for local database
+          queries and are <strong>not sent to a search service, server, or third party</strong>. Search therefore works without
+          a network connection, including in airplane mode.
+        </p>
+      </section>
+
+      <section id="sec-3">
+        <h2><span class="num">03</span>Log and diagnostic data</h2>
+        <p>
+          The app does not collect, write, or upload logs that identify you, and does not upload favorites, search history,
+          or search terms. The magnet index is bundled with the APK, and searches run only in the local database.
+        </p>
+        <p>
+          The magnet edition does not bundle poster images. When a poster is displayed, the app loads the image from a public
+          asset host over a standard HTTPS request. That request carries no account, favorites, search history, or device
+          identifier. The asset host may keep standard logs of IP address, access time, and request path for image delivery,
+          abuse prevention, and security only.
+        </p>
+        <p class="muted">
+          The app contains no crash-reporting SDK. Crash, diagnostic, or installation data collected by Google Play
+          or Android is platform-side data handled under Google’s privacy policy, not data collected inside the app.
+        </p>
+      </section>
+
+      <section id="sec-4">
+        <h2><span class="num">04</span>Cookies and local storage</h2>
+        <p>
+          This is a native Android app. It does not use cookies as an account identifier or for cross-app tracking.
+          Favorites, search history, and language preference are stored locally using Android SharedPreferences.
+        </p>
+        <p class="muted">
+          If you open an external website or app store from the app, that third party may use cookies or similar technologies
+          and handles data under its own privacy policy. This policy does not cover third-party websites.
+        </p>
+      </section>
+
+      <section id="sec-5">
+        <h2><span class="num">05</span>Permissions</h2>
+        <p>The current version requests only:</p>
+        <table>
+          <tr><th><code>INTERNET</code></th><td>Used to load poster images and to open the privacy policy, release pages, and other external links in the system browser.</td></tr>
+          <tr><th><code>ACCESS_NETWORK_STATE</code></th><td>Not read by the current version; the permission remains declared in the app manifest.</td></tr>
+        </table>
+        <p class="muted">
+          The app does not request location, contacts, SMS, camera, microphone, photos/files, storage, or device identifier
+          permissions, and does not read data belonging to other apps.
+        </p>
+      </section>
+
+      <section id="sec-6">
+        <h2><span class="num">06</span>Service providers and sharing</h2>
+        <p>
+          The app contains no advertising, analytics, crash-reporting, push-notification, or social-login SDK,
+          and does not actively read the Android Advertising ID. We do not sell, rent, or trade user data.
+        </p>
+        <p>
+          Google Play, as the app distribution platform, may process installation, purchase, and crash data under Google’s
+          privacy policy. The app itself does not include Google Play Services advertising or analytics components.
+        </p>
+        <p>
+          The magnet edition does not bundle poster images; posters are loaded from a public asset host, which may process
+          standard access logs under its own privacy policy.
+        </p>
+        <p class="muted">
+          Information may be disclosed only when required to comply with applicable law or valid legal process; to protect the
+          safety and rights of users, the developer, or the public; or to investigate a serious service security issue.
+        </p>
+      </section>
+
+      <section id="sec-7">
+        <h2><span class="num">07</span>Retention and deletion</h2>
+        <p>Favorites, search history, and language preference remain on your device until you act:</p>
+        <ul>
+          <li>remove a favorite in “Settings → Favorites”;</li>
+          <li>clear history in “Settings → Search history”;</li>
+          <li>clear app data in Android system settings;</li>
+          <li>uninstall the app.</li>
+        </ul>
+        <p class="muted">
+          Favorites, search history, and language preference have no developer-server copy. Clearing app data or uninstalling
+          removes the local data. Poster requests may be retained by the asset host under standard log practices for delivery
+          and security only.
+        </p>
+      </section>
+
+      <section id="sec-8">
+        <h2><span class="num">08</span>Links to other sites</h2>
+        <p>
+          The app may contain links to external websites or app stores. If you click a third-party link, you will be directed
+          to a site we do not operate. We have no control over its content or privacy practices, and we recommend reviewing
+          its privacy policy before use.
+        </p>
+      </section>
+
+      <section id="sec-9">
+        <h2><span class="num">09</span>Children’s privacy</h2>
+        <p>
+          This app is not directed to children under 13 and does not knowingly collect personal information from children.
+          Because the app requires no account and collects no name, email address, or location, it does not normally hold
+          children’s personal data. Contact us if you believe a child’s information has been handled improperly.
+        </p>
+      </section>
+
+      <section id="sec-10">
+        <h2><span class="num">10</span>Security</h2>
+        <p>
+          Local data is stored in the app’s private Android directory and protected by the operating system sandbox.
+          Favorites and search history remain on the device and are not uploaded. Poster loading sends only the image request
+          and no local data.
+        </p>
+      </section>
+
+      <section id="sec-11">
+        <h2><span class="num">11</span>Changes</h2>
+        <p>
+          If app features or data practices change, we will update this page and revise the effective date. Material changes
+          will be noted in the app or on the store listing. Changes are effective when posted.
+        </p>
+      </section>
+
+      <section id="sec-12">
+        <h2><span class="num">12</span>Contact</h2>
+        <p>
+          If you have questions about this policy, or wish to delete local data, contact us:
+        </p>
+        <div class="contact">
+          <strong>Developer: bzl</strong>
+          <span>App: Magnet Search (io.github.mtsrch)</span><br>
+          <span>Privacy contact: <a href="mailto:magnet-app@outlook.com">magnet-app@outlook.com</a> / <a href="mailto:magnet-search@outlook.com">magnet-search@outlook.com</a></span>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2026 Magnet Search · bzl</span>
+    <span>Last updated: 2026-11-25</span>
+  </footer>
+</div>
+</body>
+</html>
