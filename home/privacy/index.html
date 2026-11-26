@@ -104,14 +104,6 @@
     If you open an external website or app store from the app, that third party may use cookies or similar technologies
     and handles data under its own privacy policy. This policy does not cover third-party websites.
   </p>
-  <h3>Website analytics</h3>
-  <p class="note">
-    The download site at mtsrch.github.io uses a self-hosted, cookie-free page-view counter. It records the page path,
-    referring host, coarse country, user agent, and a pseudonymous visitor hash derived from the IP address and user
-    agent that rotates daily. IP addresses are not stored, no cookies are set, and the Android app does not include this
-    counter. Visitors sending a Do Not Track signal are skipped.
-  </p>
-
   <h2>5. Permissions</h2>
   <p>The app declares two standard Android permissions. Neither is required for its current features:</p>
   <ul>
@@ -193,17 +185,5 @@
   <footer>
     © 2026 Magnet Search · bzl · Last updated 2026-11-26
   </footer>
-  <script>
-  (() => {
-    if (navigator.doNotTrack === "1") return;
-    const endpoint = "https://mtsrch.auburn.today/api/site/visit";
-    const body = JSON.stringify({ path: location.pathname, referrer: document.referrer });
-    try {
-      navigator.sendBeacon(endpoint, new Blob([body], { type: "text/plain;charset=UTF-8" }));
-    } catch (_) {
-      fetch(endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=UTF-8" }, body, keepalive: true }).catch(() => {});
-    }
-  })();
-  </script>
 </body>
 </html>
