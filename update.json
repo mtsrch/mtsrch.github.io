@@ -1,7 +1,7 @@
 {
-  "versionCode": 23,
-  "versionName": "1.1.12",
-  "apkUrl": "https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.12/mtsrch-magnet-1.1.12-release.apk",
-  "sha256": "5c6f4793f3c38235bdd3b99664b3a41068e06cb72af0121b98a5f53b7ef8ea8a",
-  "size": 36514478
+  "versionCode": 24,
+  "versionName": "1.1.13",
+  "apkUrl": "https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.13/mtsrch-magnet-1.1.13-release.apk",
+  "sha256": "e1c3f4d20a80aa7ba9cee2c98a48f16e7997b77425db5dcfe590b0df507f144f",
+  "size": 37708022
 }
