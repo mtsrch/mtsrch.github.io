@@ -67,8 +67,15 @@
     }
     nav { display: flex; gap: 22px; color: var(--muted); font-size: 12px; }
     nav a:hover { color: var(--text); }
-    main { flex: 1; display: grid; place-items: center; padding: 84px 0 96px; }
-    .hero { width: min(520px, 100%); text-align: center; }
+    main { flex: 1; padding: 84px 0 96px; }
+    .hero { width: min(520px, 100%); margin: 0 auto; text-align: center; }
+    .info { width: min(720px, 100%); margin: 72px auto 0; }
+    .info h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.02em; }
+    .info h3 { margin: 22px 0 6px; font-size: 16px; color: var(--gold-soft); }
+    .info p, .info li { color: #c9ced6; font-size: 14px; line-height: 1.75; }
+    .info ul { margin: 10px 0 0; padding-left: 22px; }
+    .info a { color: var(--gold-soft); text-decoration: underline; text-underline-offset: 3px; }
+    .info .rule { height: 1px; margin: 32px 0; background: rgba(255,255,255,.06); }
     .eyebrow { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
     h1 { margin: 12px 0 0; font-size: clamp(48px, 7vw, 72px); line-height: .98; letter-spacing: -.05em; }
     .tagline { margin: 18px 0 0; color: var(--gold-soft); font-size: 19px; line-height: 1.4; letter-spacing: -.015em; }
@@ -90,6 +97,8 @@
       h1 { font-size: 46px; }
       .tagline { font-size: 17px; }
       .btn { width: 100%; }
+      .info { margin-top: 56px; }
+      .info h2 { font-size: 21px; }
     }
   </style>
 </head>
@@ -118,6 +127,45 @@
       </a>
       <p class="meta">33.6 MB · Android 8.0+ · <code>io.github.mtsrch</code></p>
     </section>
+
+    <section class="info" aria-labelledby="about-title">
+      <h2 id="about-title">Offline magnet search for Android</h2>
+      <p>
+        Magnet Search is a free Android app for searching a magnet index without sending your queries to a search
+        service. The index is bundled inside the APK, so search works without a network connection, including in
+        airplane mode. The app requires no account and contains no advertising, analytics, or crash-reporting SDK.
+      </p>
+      <p lang="zh-CN">
+        Magnet Search 是一款 Android 离线磁力搜索工具。磁力索引内置在安装包中，搜索词只在本机数据库查询，
+        不会上传到服务器；无需注册账号，也不包含广告、统计或崩溃上报 SDK。
+      </p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Search the bundled magnet index by name, tag, file extension, or sort order.</li>
+        <li>View file lists, first-seen and last-seen timestamps, and copy magnet links or infohashes.</li>
+        <li>Save favorites and recent searches locally on your device.</li>
+        <li>Chinese and English interface, with no account and no cloud sync.</li>
+        <li>Small download, Android 8.0 and later, package <code>io.github.mtsrch</code>.</li>
+      </ul>
+
+      <div class="rule"></div>
+
+      <h2>How to install</h2>
+      <p>
+        Download the signed APK above and open it on your Android device. Android may ask you to allow installs from
+        your browser or file manager; enable that permission for the installer, complete the install, then turn the
+        permission off again if you do not need it. The app does not need Google Play Services to run.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Does Magnet Search work offline?</h3>
+      <p>Yes. The magnet index is included in the APK and searches run only in the local database. No search request is sent to a server.</p>
+      <h3>Does it collect personal data?</h3>
+      <p>No account or identity information is requested. Favorites, search history, and language preference stay in the app’s private storage on your device. See the <a href="https://mtsrch.github.io/home/privacy/">privacy policy</a>.</p>
+      <h3>Is the APK signed?</h3>
+      <p>Yes. Every GitHub release APK is signed, and a SHA-256 checksum is published next to the download.</p>
+    </section>
   </main>
 
   <footer>
@@ -143,6 +191,47 @@
         "url": "https://github.com/mtsrch"
       },
       {
+        "@type": "WebPage",
+        "@id": "https://mtsrch.github.io/#webpage",
+        "url": "https://mtsrch.github.io/",
+        "name": "Magnet Search — Download the Android APK",
+        "description": "Download Magnet Search, a lightweight offline magnet search app for Android.",
+        "isPartOf": { "@id": "https://mtsrch.github.io/#website" },
+        "dateModified": "2026-11-26",
+        "inLanguage": ["en", "zh-CN"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mtsrch.github.io/#faq",
+        "isPartOf": { "@id": "https://mtsrch.github.io/#webpage" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Magnet Search work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The magnet index is included in the APK and searches run only in the local database. No search request is sent to a server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Magnet Search collect personal data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No account or identity information is requested. Favorites, search history, and language preference stay in the app’s private storage on your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the APK signed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every GitHub release APK is signed, and a SHA-256 checksum is published next to the download."
+            }
+          }
+        ]
+      },
+      {
         "@type": "SoftwareApplication",
         "@id": "https://mtsrch.github.io/#app",
         "name": "Magnet Search",
@@ -150,7 +239,7 @@
         "applicationCategory": "UtilitiesApplication",
         "softwareVersion": "1.1.6",
         "fileSize": "33.6 MB",
-        "inLanguage": "en",
+        "inLanguage": ["en", "zh-CN"],
         "description": "A lightweight Android app for offline magnet search. No ads, analytics, or trackers.",
         "image": "https://mtsrch.github.io/assets/og-cover.png",
         "downloadUrl": "https://github.com/mtsrch/mtsrch.github.io/releases/download/magnet-v1.1.6/mtsrch-magnet-1.1.6-release.apk",
