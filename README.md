@@ -22,7 +22,7 @@
 
 Magnet Search is a free Android app for searching a magnet index without sending your queries to a search service. The index is bundled inside the APK, so search works entirely offline, including in airplane mode.
 
-The app requires no account. It contains no advertising, analytics, or crash-reporting SDK.
+The app requires no account. It contains no analytics or crash-reporting SDK.
 
 ## Features
 
@@ -57,11 +57,11 @@ The GitHub build includes an in-app updater. It checks `update.json`, downloads 
 
 ## Privacy
 
-- No account, name, email address, phone number, location, or advertising ID is requested.
+- No account, name, email address, phone number, location, or device identifier is requested.
 - Favorites, search history, and language preference stay in the app's private storage.
 - Search terms are used only for local database queries and are not sent to a server.
 - Network access is used only to check for and download app updates.
-- No advertising, analytics, or crash-reporting SDK is included.
+- No analytics or crash-reporting SDK is included.
 
 Read the full [privacy policy](https://mtsrch.github.io/home/privacy/).
 
